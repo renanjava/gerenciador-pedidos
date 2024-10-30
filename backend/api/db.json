@@ -1,0 +1,89 @@
+{
+    "clientes": [
+        {
+            "idUsuario": 1,
+            "nome": "renan",
+            "dataCadastro": "30/10/2024",
+            "endereco": {
+                "rua": "expedicionarios",
+                "numero": "2680"
+            }
+        },
+        {
+            "idUsuario": 2,
+            "nome": "juliana",
+            "dataCadastro": "30/10/2024",
+            "endereco": {
+                "rua": "osvaldo fernandes",
+                "numero": "435"
+            }
+        },
+        {
+            "idUsuario": 3,
+            "nome": "denizia",
+            "dataCadastro": "30/10/2024",
+            "endereco": {
+                "rua": "orquideas",
+                "numero": "11"
+            }
+        }
+    ],
+    "pedidos": [
+        {
+            "idPedido": 1,
+            "idUsuario": 1,
+            "valor": 60.00,
+            "descricao": "pedido feito no balcão",
+            "dataRealizada": "15/10/2024",
+            "dataRecebimento": "04/11/2024"
+        },
+        {
+            "idPedido": 2,
+            "idUsuario": 1,
+            "valor": 75.50,
+            "descricao": "pedido online",
+            "dataRealizada": "20/10/2024",
+            "dataRecebimento": "10/11/2024"
+        },
+        {
+            "idPedido": 3,
+            "idUsuario": 1,
+            "valor": 30.00,
+            "descricao": "pedido para entrega",
+            "dataRealizada": "25/10/2024",
+            "dataRecebimento": "12/11/2024"
+        },
+        {
+            "idPedido": 4,
+            "idUsuario": 2,
+            "valor": 45.00,
+            "descricao": "pedido feito no balcão",
+            "dataRealizada": "22/10/2024",
+            "dataRecebimento": "11/11/2024"
+        },
+        {
+            "idPedido": 5,
+            "idUsuario": 2,
+            "valor": 90.00,
+            "descricao": "pedido online",
+            "dataRealizada": "28/10/2024",
+            "dataRecebimento": "15/11/2024"
+        },
+        {
+            "idPedido": 6,
+            "idUsuario": 3,
+            "valor": 50.00,
+            "descricao": "pedido para entrega",
+            "dataRealizada": "18/10/2024",
+            "dataRecebimento": "08/11/2024"
+        },
+        {
+            "idPedido": 7,
+            "idUsuario": 3,
+            "valor": 65.00,
+            "descricao": "pedido feito no balcão",
+            "dataRealizada": "30/10/2024",
+            "dataRecebimento": "18/11/2024"
+        }
+    ]
+}
