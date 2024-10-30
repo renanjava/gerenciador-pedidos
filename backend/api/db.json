@@ -30,60 +30,97 @@
     ],
     "pedidos": [
         {
-            "idPedido": 1,
-            "idUsuario": 1,
-            "valor": 60.00,
-            "descricao": "pedido feito no balcão",
-            "dataRealizada": "15/10/2024",
-            "dataRecebimento": "04/11/2024"
-        },
-        {
-            "idPedido": 2,
-            "idUsuario": 1,
-            "valor": 75.50,
-            "descricao": "pedido online",
-            "dataRealizada": "20/10/2024",
-            "dataRecebimento": "10/11/2024"
-        },
-        {
-            "idPedido": 3,
-            "idUsuario": 1,
-            "valor": 30.00,
-            "descricao": "pedido para entrega",
-            "dataRealizada": "25/10/2024",
-            "dataRecebimento": "12/11/2024"
-        },
-        {
-            "idPedido": 4,
-            "idUsuario": 2,
-            "valor": 45.00,
-            "descricao": "pedido feito no balcão",
-            "dataRealizada": "22/10/2024",
-            "dataRecebimento": "11/11/2024"
-        },
-        {
-            "idPedido": 5,
-            "idUsuario": 2,
-            "valor": 90.00,
-            "descricao": "pedido online",
-            "dataRealizada": "28/10/2024",
-            "dataRecebimento": "15/11/2024"
-        },
-        {
-            "idPedido": 6,
-            "idUsuario": 3,
-            "valor": 50.00,
-            "descricao": "pedido para entrega",
-            "dataRealizada": "18/10/2024",
-            "dataRecebimento": "08/11/2024"
-        },
-        {
-            "idPedido": 7,
-            "idUsuario": 3,
-            "valor": 65.00,
-            "descricao": "pedido feito no balcão",
-            "dataRealizada": "30/10/2024",
-            "dataRecebimento": "18/11/2024"
-        }
+            "pedidos": [
+                {
+                    "idPedido": 1,
+                    "idUsuario": 1,
+                    "valor": 60.00,
+                    "descricao": "pedido feito no balcão",
+                    "dataPedido": "15/10/2024",
+                    "dataReceber": "04/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 2,
+                    "idUsuario": 1,
+                    "valor": 75.50,
+                    "descricao": "pedido online",
+                    "dataPedido": "20/10/2024",
+                    "dataReceber": "10/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 3,
+                    "idUsuario": 1,
+                    "valor": 30.00,
+                    "descricao": "pedido para entrega",
+                    "dataPedido": "25/10/2024",
+                    "dataReceber": "12/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 4,
+                    "idUsuario": 2,
+                    "valor": 45.00,
+                    "descricao": "pedido feito no balcão",
+                    "dataPedido": "22/10/2024",
+                    "dataReceber": "11/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 5,
+                    "idUsuario": 2,
+                    "valor": 90.00,
+                    "descricao": "pedido online",
+                    "dataPedido": "28/10/2024",
+                    "dataReceber": "15/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 6,
+                    "idUsuario": 3,
+                    "valor": 50.00,
+                    "descricao": "pedido para entrega",
+                    "dataPedido": "18/10/2024",
+                    "dataReceber": "08/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 7,
+                    "idUsuario": 3,
+                    "valor": 65.00,
+                    "descricao": "pedido feito no balcão",
+                    "dataPedido": "30/10/2024",
+                    "dataReceber": "18/11/2024",
+                    "pago": false
+                },
+                {
+                    "idPedido": 8,
+                    "idUsuario": 1,
+                    "valor": 100.00,
+                    "descricao": "pedido especial",
+                    "dataPedido": "01/11/2024",
+                    "dataReceber": "20/11/2024",
+                    "pago": true,
+                    "informacoesPagamento": {
+                        "dataPagamento": "01/11/2024",
+                        "formaPagamento": "transferência bancária"
+                    }
+                },
+                {
+                    "idPedido": 9,
+                    "idUsuario": 2,
+                    "valor": 120.00,
+                    "descricao": "pedido de aniversário",
+                    "dataPedido": "05/11/2024",
+                    "dataReceber": "25/11/2024",
+                    "pago": true,
+                    "informacoesPagamento": {
+                        "dataPagamento": "05/11/2024",
+                        "formaPagamento": "cartão de débito"
+                    }
+                }
+            ]
+        }        
     ]
 }
