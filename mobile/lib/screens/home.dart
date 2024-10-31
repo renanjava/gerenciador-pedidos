@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/components/navigation-bar.component.dart';
 
 const tituloPagina = 'Gerenciamento de pedidos pendentes';
 
@@ -86,23 +87,7 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: NavigationBar(
-          destinations: const [
-            NavigationDestination(
-              //selectedIcon: Icon(Icons.home),
-              icon: Icon(Icons.home_outlined),
-              label: 'Início',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.account_circle),
-              label: 'Clientes',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.backup_table),
-              label: 'Pedidos',
-            ),
-          ],
-        ),
+        bottomNavigationBar: const NavigationBarComponent()
       ),
     );
   }

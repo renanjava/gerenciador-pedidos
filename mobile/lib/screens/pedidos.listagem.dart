@@ -1,14 +1,16 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/components/navigation-bar.component.dart';
 
 const tituloPagina = 'Listagem de pedidos';
 final dataAtual = DateTime.now();
 const vermelho = Color.fromARGB(255, 226, 105, 105);
 const amarelo = Color.fromARGB(255, 216, 202, 77);
 const verde = Color.fromARGB(255, 100, 190, 103);
+const icone = Icons.backup_table;
 
-class ListagemCliente extends StatelessWidget {
-  const ListagemCliente({super.key});
+class PedidosListagem extends StatelessWidget {
+  const PedidosListagem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +34,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: vermelho,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -40,7 +42,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: amarelo,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -48,7 +50,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: amarelo,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -56,7 +58,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: amarelo,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -64,7 +66,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -72,7 +74,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -80,7 +82,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -88,7 +90,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -96,7 +98,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -104,7 +106,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -112,7 +114,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -120,7 +122,7 @@ class ListagemCliente extends StatelessWidget {
                   Card(
                     color: verde,
                     child: ListTile(
-                      leading: Icon(Icons.account_circle),
+                      leading: Icon(icone),
                       title: Text('valor1'),
                       subtitle: Text('descricao1'),
                     ),
@@ -134,6 +136,7 @@ class ListagemCliente extends StatelessWidget {
           onPressed: () {},
           child: const Icon(Icons.add),
         ),
+        bottomNavigationBar: const NavigationBarComponent(),
       ),
     );
   }
