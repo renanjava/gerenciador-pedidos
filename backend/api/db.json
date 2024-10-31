@@ -1,7 +1,7 @@
 {
     "clientes": [
         {
-            "idUsuario": 1,
+            "idCliente": 1,
             "nome": "renan",
             "dataCadastro": "30/10/2024",
             "endereco": {
@@ -10,7 +10,7 @@
             }
         },
         {
-            "idUsuario": 2,
+            "idCliente": 2,
             "nome": "juliana",
             "dataCadastro": "30/10/2024",
             "endereco": {
@@ -19,7 +19,7 @@
             }
         },
         {
-            "idUsuario": 3,
+            "idCliente": 3,
             "nome": "denizia",
             "dataCadastro": "30/10/2024",
             "endereco": {
@@ -33,7 +33,7 @@
             "pedidos": [
                 {
                     "idPedido": 1,
-                    "idUsuario": 1,
+                    "idCliente": 1,
                     "valor": 60.00,
                     "descricao": "pedido feito no balcão",
                     "dataPedido": "15/10/2024",
@@ -42,7 +42,7 @@
                 },
                 {
                     "idPedido": 2,
-                    "idUsuario": 1,
+                    "idCliente": 1,
                     "valor": 75.50,
                     "descricao": "pedido online",
                     "dataPedido": "20/10/2024",
@@ -51,7 +51,7 @@
                 },
                 {
                     "idPedido": 3,
-                    "idUsuario": 1,
+                    "idCliente": 1,
                     "valor": 30.00,
                     "descricao": "pedido para entrega",
                     "dataPedido": "25/10/2024",
@@ -60,7 +60,7 @@
                 },
                 {
                     "idPedido": 4,
-                    "idUsuario": 2,
+                    "idCliente": 2,
                     "valor": 45.00,
                     "descricao": "pedido feito no balcão",
                     "dataPedido": "22/10/2024",
@@ -69,7 +69,7 @@
                 },
                 {
                     "idPedido": 5,
-                    "idUsuario": 2,
+                    "idCliente": 2,
                     "valor": 90.00,
                     "descricao": "pedido online",
                     "dataPedido": "28/10/2024",
@@ -78,7 +78,7 @@
                 },
                 {
                     "idPedido": 6,
-                    "idUsuario": 3,
+                    "idCliente": 3,
                     "valor": 50.00,
                     "descricao": "pedido para entrega",
                     "dataPedido": "18/10/2024",
@@ -87,7 +87,7 @@
                 },
                 {
                     "idPedido": 7,
-                    "idUsuario": 3,
+                    "idCliente": 3,
                     "valor": 65.00,
                     "descricao": "pedido feito no balcão",
                     "dataPedido": "30/10/2024",
@@ -96,7 +96,7 @@
                 },
                 {
                     "idPedido": 8,
-                    "idUsuario": 1,
+                    "idCliente": 1,
                     "valor": 100.00,
                     "descricao": "pedido especial",
                     "dataPedido": "01/11/2024",
@@ -109,7 +109,7 @@
                 },
                 {
                     "idPedido": 9,
-                    "idUsuario": 2,
+                    "idCliente": 2,
                     "valor": 120.00,
                     "descricao": "pedido de aniversário",
                     "dataPedido": "05/11/2024",
