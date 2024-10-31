@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const pageTitle = 'Gerenciamento de pedidos pendentes';
+const tituloPagina = 'Gerenciamento de pedidos pendentes';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -10,7 +10,7 @@ class Home extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(pageTitle),
+          title: const Text(tituloPagina),
           backgroundColor: Colors.blue,
         ),
         body: ListView(
@@ -89,16 +89,16 @@ class Home extends StatelessWidget {
         bottomNavigationBar: NavigationBar(
           destinations: const [
             NavigationDestination(
-              selectedIcon: Icon(Icons.home),
+              //selectedIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
               label: 'Início',
             ),
             NavigationDestination(
-              icon: Badge(child: Icon(Icons.account_circle)),
+              icon: Icon(Icons.account_circle),
               label: 'Clientes',
             ),
             NavigationDestination(
-              icon: Badge(child: Icon(Icons.backup_table)),
+              icon: Icon(Icons.backup_table),
               label: 'Pedidos',
             ),
           ],
