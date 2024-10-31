@@ -34,14 +34,30 @@ class Home extends StatelessWidget {
                         ],
                       ),
                     ),
+                  ),            
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(50),
+              child: Column(
+                children: [
+                  const Text(
+                    'PEDIDOS PRÓXIMOS DE EXPIRAR',
+                    style: TextStyle(fontSize: 20),
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: const ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Colors.blue)),
-                    child: const Text('Visualizar todos',
-                        style: TextStyle(color: Colors.black)),
-                  )
+                  Container(
+                    height: 300,
+                    width: 700,
+                    color: Colors.grey[350],
+                    child: const Center(
+                      child: Row(
+                        children: [
+                          Card(),
+                        ],
+                      ),
+                    ),
+                  ),                 
                 ],
               ),
             ),
@@ -65,58 +81,25 @@ class Home extends StatelessWidget {
                       ),
                     ),
                   ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: const ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Colors.blue)),
-                    child: const Text('Visualizar todos',
-                        style: TextStyle(color: Colors.black)),
-                  )
-                ],
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(50),
-              child: Column(
-                children: [
-                  const Text(
-                    'PEDIDOS PRÓXIMOS DE EXPIRAR',
-                    style: TextStyle(fontSize: 20),
-                  ),
-                  Container(
-                    height: 300,
-                    width: 700,
-                    color: Colors.grey[350],
-                    child: const Center(
-                      child: Row(
-                        children: [
-                          Card(),
-                        ],
-                      ),
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: const ButtonStyle(
-                        backgroundColor: WidgetStatePropertyAll(Colors.blue)),
-                    child: const Text('Visualizar todos',
-                        style: TextStyle(color: Colors.black)),
-                  )
                 ],
               ),
             ),
           ],
         ),
         bottomNavigationBar: NavigationBar(
-          destinations: const[
+          destinations: const [
             NavigationDestination(
               selectedIcon: Icon(Icons.home),
               icon: Icon(Icons.home_outlined),
-              label: 'Home',
+              label: 'Início',
             ),
             NavigationDestination(
-              icon: Badge(child: Icon(Icons.notifications_sharp)),
-              label: 'Notifications',
+              icon: Badge(child: Icon(Icons.account_circle)),
+              label: 'Clientes',
+            ),
+            NavigationDestination(
+              icon: Badge(child: Icon(Icons.backup_table)),
+              label: 'Pedidos',
             ),
           ],
         ),
