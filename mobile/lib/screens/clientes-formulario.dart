@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/navigation-bar.component.dart';
 
+const tituloPagina = 'Formulário de clientes';
+
 class ClientesFormulario extends StatelessWidget {
   final TextEditingController idCliente = TextEditingController();
   final TextEditingController nome = TextEditingController();
@@ -15,7 +17,7 @@ class ClientesFormulario extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Formulário de clientes'),
+          title: const Text(tituloPagina),
           backgroundColor: Colors.blue,
         ),
         body: Padding(
@@ -102,7 +104,7 @@ class ClientesFormulario extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 20,
+                height: 30,
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 ElevatedButton(
