@@ -35,7 +35,7 @@ class Home extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),            
+                  ),
                 ],
               ),
             ),
@@ -58,7 +58,7 @@ class Home extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),                 
+                  ),
                 ],
               ),
             ),
@@ -87,7 +87,7 @@ class Home extends StatelessWidget {
             ),
           ],
         ),
-        bottomNavigationBar: const NavigationBarComponent()
+        bottomNavigationBar: const NavigationBarComponent(),
       ),
     );
   }

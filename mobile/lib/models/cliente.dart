@@ -1,4 +1,4 @@
-import 'package:gerenciador_pedidos/endereco/endereco.dart';
+import 'package:gerenciador_pedidos/others/endereco.dart';
 
 class Cliente {
   final String idUsuario;

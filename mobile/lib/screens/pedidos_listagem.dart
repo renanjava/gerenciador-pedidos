@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
 import 'package:gerenciador_pedidos/components/pedidos_card.dart';
+import 'package:gerenciador_pedidos/screens/pedidos_formulario.dart';
 
 const tituloPagina = 'Listagem de pedidos';
 final dataAtual = DateTime.now();
@@ -27,7 +28,10 @@ class PedidosListagem extends StatelessWidget {
           child: PedidosCard(),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => PedidosFormulario()),
+          ),
           child: const Icon(Icons.add),
         ),
         bottomNavigationBar: const NavigationBarComponent(),

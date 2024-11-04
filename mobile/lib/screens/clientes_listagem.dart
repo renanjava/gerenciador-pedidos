@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/clientes_card.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
+import 'package:gerenciador_pedidos/screens/clientes_formulario.dart';
 
 const tituloPagina = 'Listagem de clientes';
 
@@ -25,7 +26,10 @@ class ClientesListagem extends StatelessWidget {
           child: ClientesCard(),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => ClientesFormulario()),
+          ),
           child: const Icon(Icons.add),
         ),
         bottomNavigationBar: const NavigationBarComponent(),
