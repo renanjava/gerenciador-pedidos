@@ -17,4 +17,9 @@ class Endereco {
       'numero': numero,
     };
   }
+
+  @override
+  String toString() {
+    return 'Endereco{rua: $rua, numero: $numero}';
+  }
 }

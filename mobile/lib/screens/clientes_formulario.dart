@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
+import 'package:gerenciador_pedidos/models/cliente.dart';
+import 'package:gerenciador_pedidos/others/endereco.dart';
 
 const tituloPagina = 'Formulário de clientes';
 
@@ -97,7 +99,7 @@ class ClientesFormulario extends StatelessWidget {
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () => criaCliente(),
                   style: const ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(Colors.blue)),
                   child: const Text(
@@ -112,5 +114,19 @@ class ClientesFormulario extends StatelessWidget {
         bottomNavigationBar: const NavigationBarComponent(),
       ),
     );
+  }
+
+  void criaCliente() {
+    Endereco endereco =
+        Endereco(rua: ruaEndereco.text, numero: numeroEndereco.text);
+
+    Cliente cliente = Cliente(
+      idCliente: idCliente.text,
+      nome: nome.text,
+      dataCadastro: dataCadastro.text,
+      endereco: endereco,
+    );
+
+    //debugPrint(cliente.toString());
   }
 }
