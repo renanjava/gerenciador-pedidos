@@ -1,20 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/components/clientes_card.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
-import 'package:gerenciador_pedidos/components/pedidos_card.dart';
 
-const tituloPagina = 'Listagem de pedidos';
-final dataAtual = DateTime.now();
+const tituloPagina = 'Listagem de clientes';
 
-class PedidosListagem extends StatelessWidget {
-  const PedidosListagem({super.key});
+class ClientesListagem extends StatelessWidget {
+  const ClientesListagem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
-              '$tituloPagina - ${dataAtual.day}/${dataAtual.month}/${dataAtual.year}'),
+          title: const Text(tituloPagina),
           backgroundColor: Colors.blue,
         ),
         body: const Padding(
@@ -24,7 +22,7 @@ class PedidosListagem extends StatelessWidget {
             130.0,
             30.0,
           ),
-          child: PedidosCard(),
+          child: ClientesCard(),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {},

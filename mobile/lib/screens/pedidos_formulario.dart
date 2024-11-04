@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gerenciador_pedidos/components/navigation-bar.component.dart';
+import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
 
 const tituloPagina = 'Formulário de pedidos';
 
@@ -25,31 +25,6 @@ class PedidosFormulario extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(170.0, 25.0, 170.0, 0.0),
           child: Column(
             children: [
-              TextField(
-                controller: idPedido,
-                keyboardType: TextInputType.number,
-                style: const TextStyle(
-                  fontSize: 16.0,
-                ),
-                decoration: const InputDecoration(
-                    icon: Icon(Icons.insert_drive_file),
-                    labelText: 'ID Pedido',
-                    hintText: '000'),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              TextField(
-                controller: idCliente,
-                keyboardType: TextInputType.number,
-                style: const TextStyle(
-                  fontSize: 16.0,
-                ),
-                decoration: const InputDecoration(
-                    icon: Icon(Icons.insert_drive_file),
-                    labelText: 'ID Cliente',
-                    hintText: '000'),
-              ),
               const SizedBox(
                 height: 20,
               ),

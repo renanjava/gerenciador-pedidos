@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gerenciador_pedidos/components/navigation-bar.component.dart';
+import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
 
 const tituloPagina = 'Gerenciamento de pedidos pendentes';
 
