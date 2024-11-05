@@ -1,6 +1,6 @@
 class Pedido {
   final String idPedido;
-  final String idUsuario;
+  final String idCliente;
   final double valor;
   final String descricao;
   final String dataPedido;
@@ -9,7 +9,7 @@ class Pedido {
 
   Pedido({
     required this.idPedido,
-    required this.idUsuario,
+    required this.idCliente,
     required this.valor,
     required this.descricao,
     required this.dataPedido,
@@ -20,7 +20,7 @@ class Pedido {
   factory Pedido.fromJson(Map<String, dynamic> json) {
     return Pedido(
       idPedido: json['idPedido'] ?? '',
-      idUsuario: json['idUsuario'] ?? '',
+      idCliente: json['idCliente'] ?? '',
       valor: (json['valor'] ?? 0.0).toDouble(),
       descricao: json['descricao'] ?? '',
       dataPedido: json['dataPedido'] ?? '',
@@ -32,7 +32,7 @@ class Pedido {
   Map<String, dynamic> toJson() {
     return {
       'idPedido': idPedido,
-      'idUsuario': idUsuario,
+      'idCliente': idCliente,
       'valor': valor,
       'descricao': descricao,
       'dataPedido': dataPedido,
