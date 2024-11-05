@@ -38,7 +38,28 @@ class _ClientesCardState extends State<ClientesCard> {
           child: ListTile(
             leading: const Icon(Icons.account_circle_outlined),
             title: Text(cliente.nome),
-            subtitle: Text(cliente.dataCadastro),
+            subtitle:
+                Text('${cliente.endereco.rua}, ${cliente.endereco.numero}'),
+            trailing: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Text('Pedidos: 0'),
+                    IconButton(
+                      icon: const Icon(Icons.edit, size: 20),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.delete, size: 20),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         );
       },

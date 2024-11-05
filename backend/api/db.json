@@ -59,6 +59,16 @@
         "rua": "j",
         "numero": "j"
       }
+    },
+    {
+      "id": "d0a5",
+      "idCliente": "ba87fdf5-3674-406f-8f98-a7c820b41e17",
+      "nome": "klkql",
+      "dataCadastro": "kjkj",
+      "endereco": {
+        "rua": "ljlj",
+        "numero": "ljj"
+      }
     }
   ],
   "pedidos": [

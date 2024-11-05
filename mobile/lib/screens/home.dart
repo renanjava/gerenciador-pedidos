@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'PEDIDOS PRÓXIMOS DE EXPIRAR',
+                    '...',
                     style: TextStyle(fontSize: 20),
                   ),
                   Container(
@@ -44,7 +44,7 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'PEDIDOS PRÓXIMOS DE EXPIRAR',
+                    '...',
                     style: TextStyle(fontSize: 20),
                   ),
                   Container(
@@ -67,7 +67,7 @@ class Home extends StatelessWidget {
               child: Column(
                 children: [
                   const Text(
-                    'PEDIDOS PRÓXIMOS DE EXPIRAR',
+                    '...',
                     style: TextStyle(fontSize: 20),
                   ),
                   Container(

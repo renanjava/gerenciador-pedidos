@@ -31,4 +31,15 @@ class ClientesService {
       debugPrint("Erro ao cadastrar usuário: ${response.statusCode}");
     }
   }
+
+  Future<Cliente> findById(String id) async {
+    Uri uri = Uri.parse('http://localhost:3000/clientes/$id');
+    var response = await http.get(uri);
+
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> data = json.decode(response.body);
+      return Cliente.fromJson(data);
+    }
+    throw Exception("Erro ao buscar cliente");
+  }
 }
