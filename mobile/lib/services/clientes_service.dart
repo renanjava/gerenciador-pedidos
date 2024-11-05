@@ -15,7 +15,7 @@ class ClientesService {
     throw Exception("Erro ao buscar clientes");
   }
 
-  Future<void> create(Cliente cliente) async {
+  Future<String> create(Cliente cliente) async {
     Uri uri = Uri.parse("http://localhost:3000/clientes");
     var response = await http.post(
       uri,
@@ -27,8 +27,10 @@ class ClientesService {
 
     if (response.statusCode == 201) {
       debugPrint("Usuário cadastrado com sucesso!");
+      return "Usuário cadastrado com sucesso!";
     } else {
       debugPrint("Erro ao cadastrar usuário: ${response.statusCode}");
+      return "Erro ao cadastrar usuário: ${response.statusCode}";
     }
   }
 

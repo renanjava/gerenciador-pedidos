@@ -89,6 +89,66 @@
         "rua": "k",
         "numero": "k"
       }
+    },
+    {
+      "id": "2214",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
+    },
+    {
+      "id": "8547",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
+    },
+    {
+      "id": "3b52",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
+    },
+    {
+      "id": "ab80",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
+    },
+    {
+      "id": "b3cc",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
+    },
+    {
+      "id": "e148",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
     }
   ],
   "pedidos": [

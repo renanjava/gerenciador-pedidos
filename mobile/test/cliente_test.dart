@@ -6,10 +6,11 @@ void main() {
   group('Testando atributos do Cliente', () {
     Endereco endereco = Endereco(rua: 'Rua dos testes', numero: '400');
     Cliente cliente = Cliente(
-        dataCadastro: '00/00/0000',
-        nome: 'tester',
-        idCliente: '948040',
-        endereco: endereco);
+      dataCadastro: '00/00/0000',
+      nome: 'tester',
+      idCliente: '948040',
+      endereco: endereco,
+    );
 
     test('Cliente deve ter uma Data de Cadastro', () {
       expect('00/00/0000', cliente.dataCadastro);
