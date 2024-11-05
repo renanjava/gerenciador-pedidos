@@ -98,7 +98,10 @@ class PedidosFormulario extends StatelessWidget {
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    criaPedido();
+                    Navigator.pop(context);
+                  },
                   style: const ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(Colors.blue)),
                   child: const Text(
@@ -114,4 +117,6 @@ class PedidosFormulario extends StatelessWidget {
       ),
     );
   }
+
+  void criaPedido() {}
 }

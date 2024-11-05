@@ -100,7 +100,10 @@ class ClientesFormulario extends StatelessWidget {
               ),
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 ElevatedButton(
-                  onPressed: () => criaCliente(),
+                  onPressed: () {
+                    criaCliente();
+                    Navigator.pop(context);
+                  },
                   style: const ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(Colors.blue)),
                   child: const Text(
