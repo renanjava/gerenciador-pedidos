@@ -40,6 +40,26 @@ class _PedidosCardState extends State<PedidosCard> {
             leading: const Icon(Icons.backup_table),
             title: Text(pedidoValor),
             subtitle: Text(pedido.descricao),
+            trailing: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text('${pedido.dataPedido} - ${pedido.dataReceber}'),
+                    IconButton(
+                      icon: const Icon(Icons.edit, size: 20),
+                      onPressed: () {},
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.delete, size: 20),
+                      onPressed: () {},
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         );
       },
