@@ -25,6 +25,7 @@ class _ClientesCardState extends State<ClientesCard> {
     final fetchedClientes = await service.findAll();
     setState(() {
       clientes = fetchedClientes;
+      //ordenar pela quantidade de pedidos
     });
   }
 

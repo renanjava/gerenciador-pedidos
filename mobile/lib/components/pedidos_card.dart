@@ -25,6 +25,7 @@ class _PedidosCardState extends State<PedidosCard> {
     final fetchedPedidos = await service.findAll();
     setState(() {
       pedidos = fetchedPedidos;
+      //ordenar pelas cores
     });
   }
 
@@ -36,6 +37,7 @@ class _PedidosCardState extends State<PedidosCard> {
         final pedido = pedidos[index];
         final pedidoValor = pedido.valor.toStringAsFixed(2);
         return Card(
+          color: atribuirCor(pedido.dataReceber),
           child: ListTile(
             leading: const Icon(Icons.backup_table),
             title: Text(pedidoValor),
@@ -64,5 +66,22 @@ class _PedidosCardState extends State<PedidosCard> {
         );
       },
     );
+  }
+
+  Color atribuirCor(String dataReceberString) {
+    final dataAtualDate = DateTime.now();
+    final String dataAtualString =
+        "${dataAtualDate.day}/${dataAtualDate.month}/${dataAtualDate.year}";
+
+    /*
+    - - -  le a documentação, qualquer coisa eu passo essa data receber pra Date e uso um método do date mesmo
+
+    diff (dataAtualString, dataReceberString)
+    1 dia -> return Colors.red
+    7 dias -> return Colors.yellow
+    acima de 7 dias -> return Colors.green
+    */
+
+    return Colors.black;
   }
 }

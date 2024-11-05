@@ -28,6 +28,9 @@ class PedidosFormulario extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
+
+              //listagem de clientes existentes para atribuir o pedido nele
+
               TextField(
                 controller: valor,
                 keyboardType: TextInputType.number,
