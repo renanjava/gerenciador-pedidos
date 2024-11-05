@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
 import 'package:gerenciador_pedidos/models/cliente.dart';
 import 'package:gerenciador_pedidos/others/endereco.dart';
+import 'package:gerenciador_pedidos/services/clientes_service.dart';
+import 'package:uuid/uuid.dart';
 
 const tituloPagina = 'Formulário de clientes';
 
 class ClientesFormulario extends StatelessWidget {
-  final TextEditingController idCliente = TextEditingController();
   final TextEditingController nome = TextEditingController();
   final TextEditingController dataCadastro = TextEditingController();
   final TextEditingController ruaEndereco = TextEditingController();
@@ -116,17 +117,20 @@ class ClientesFormulario extends StatelessWidget {
     );
   }
 
-  void criaCliente() {
-    Endereco endereco =
-        Endereco(rua: ruaEndereco.text, numero: numeroEndereco.text);
-
-    Cliente cliente = Cliente(
-      idCliente: idCliente.text,
+  void criaCliente() async {
+    ClientesService service = ClientesService();
+    Uuid uuid = const Uuid();
+    Endereco endereco = Endereco(
+      rua: ruaEndereco.text,
+      numero: numeroEndereco.text,
+    );
+    Cliente clienteForm = Cliente(
+      idCliente: uuid.v4(),
       nome: nome.text,
       dataCadastro: dataCadastro.text,
       endereco: endereco,
     );
 
-    //debugPrint(cliente.toString());
+    await service.create(clienteForm);
   }
 }
