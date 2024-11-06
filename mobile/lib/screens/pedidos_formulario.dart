@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
+import 'package:gerenciador_pedidos/models/pedido.dart';
+import 'package:gerenciador_pedidos/services/pedidos_service.dart';
+import 'package:uuid/uuid.dart';
 
 const tituloPagina = 'Formulário de pedidos';
 
@@ -121,5 +124,19 @@ class PedidosFormulario extends StatelessWidget {
     );
   }
 
-  void criaPedido() {}
+  void criaPedido() async {
+    PedidosService service = PedidosService();
+    Uuid uuid = const Uuid();
+
+    Pedido pedidoForm = Pedido(
+      idPedido: uuid.v4(),
+      idCliente: idCliente.text,
+      valor: double.tryParse(valor.text) ?? 0.0,
+      descricao: descricao.text,
+      dataPedido: dataPedido.text,
+      dataReceber: dataReceber.text,
+    );
+
+    await service.create(pedidoForm);
+  }
 }

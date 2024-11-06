@@ -24,8 +24,7 @@ class _PedidosCardState extends State<PedidosCard> {
   Future<void> _fetchPedidos() async {
     final fetchedPedidos = await service.findAll();
     setState(() {
-      pedidos = fetchedPedidos;
-      //ordenar pelas cores
+      pedidos = ordenarPorDataRecebimento(fetchedPedidos);
     });
   }
 
@@ -70,18 +69,26 @@ class _PedidosCardState extends State<PedidosCard> {
 
   Color atribuirCor(String dataReceberString) {
     final dataAtualDate = DateTime.now();
-    final String dataAtualString =
-        "${dataAtualDate.day}/${dataAtualDate.month}/${dataAtualDate.year}";
+    final dataReceberDate =
+        DateTime.parse(dataReceberString.split('/').reversed.join('-'));
 
-    /*
-    - - -  le a documentação, qualquer coisa eu passo essa data receber pra Date e uso um método do date mesmo
+    final diferencaDias = dataReceberDate.difference(dataAtualDate).inDays;
 
-    diff (dataAtualString, dataReceberString)
-    1 dia -> return Colors.red
-    7 dias -> return Colors.yellow
-    acima de 7 dias -> return Colors.green
-    */
+    if (diferencaDias <= 1) {
+      return const Color.fromARGB(255, 226, 105, 105);
+    } else if (diferencaDias <= 7) {
+      return const Color.fromARGB(255, 216, 202, 77);
+    }
+    return const Color.fromARGB(255, 100, 190, 103);
+  }
 
-    return Colors.black;
+  List<Pedido> ordenarPorDataRecebimento(List<Pedido> fetchedPedidos) {
+    fetchedPedidos.sort((a, b) {
+      final dataA = DateTime.parse(a.dataReceber.split('/').reversed.join('-'));
+      final dataB = DateTime.parse(b.dataReceber.split('/').reversed.join('-'));
+
+      return dataA.compareTo(dataB);
+    });
+    return fetchedPedidos;
   }
 }

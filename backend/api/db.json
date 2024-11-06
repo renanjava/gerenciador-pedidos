@@ -149,6 +149,16 @@
         "rua": "Rua dos testes",
         "numero": "400"
       }
+    },
+    {
+      "id": "8f96",
+      "idCliente": "39649440-504f-4ec7-b662-b774b2f015f5",
+      "nome": "aa",
+      "dataCadastro": "aaa",
+      "endereco": {
+        "rua": "aaa",
+        "numero": "aaa"
+      }
     }
   ],
   "pedidos": [
@@ -249,6 +259,26 @@
         "formaPagamento": "cartão de débito"
       },
       "id": "410b"
+    },
+    {
+      "id": "f374",
+      "idPedido": "8371a66e-fba8-460d-8d0c-7b04df534b51",
+      "idCliente": "",
+      "valor": 0,
+      "descricao": "nenhum",
+      "dataPedido": "06/11/2024",
+      "dataReceber": "06/11/2024",
+      "pago": false
+    },
+    {
+      "id": "07c5",
+      "idPedido": "3a0ae43f-fd0f-4d38-83a6-9713cdf2c5aa",
+      "idCliente": "",
+      "valor": 5,
+      "descricao": "nada",
+      "dataPedido": "01/11/2024",
+      "dataReceber": "02/11/2024",
+      "pago": false
     }
   ]
 }
