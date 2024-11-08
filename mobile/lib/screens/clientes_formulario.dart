@@ -62,12 +62,12 @@ class ClientesFormulario extends StatelessWidget {
                   children: [
                     Expanded(
                       child: _buildTextField(
-                          ruaEndereco, 'Rua', Icons.assistant_photo_outlined),
+                          ruaEndereco, 'Rua', Icons.location_on),
                     ),
                     const SizedBox(width: 30),
                     Expanded(
                       child: _buildTextField(numeroEndereco, 'Número',
-                          Icons.numbers, TextInputType.number),
+                          Icons.home, TextInputType.number),
                     ),
                   ],
                 ),
