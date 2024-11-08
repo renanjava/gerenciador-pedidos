@@ -5,7 +5,7 @@ void main() {
   group('Testando atributos do Pedido', () {
     Pedido pedido = Pedido(
         idPedido: '80777',
-        idCliente: '494432',
+        nomeCliente: '494432',
         valor: 32.00,
         descricao: 'Cartão não passou na hora da entrega',
         dataPedido: '31/10/2024',
@@ -16,7 +16,7 @@ void main() {
     });
 
     test('Pedido deve ter um ID do Cliente', () {
-      expect('494432', pedido.idCliente);
+      expect('494432', pedido.nomeCliente);
     });
 
     test('Pedido deve ter um Valor', () {

@@ -8,7 +8,8 @@
         "rua": "expedicionarios",
         "numero": "2680"
       },
-      "id": "0b56"
+      "id": "0b56",
+      "quantidadePedidos": 1
     },
     {
       "idCliente": "4b6953e7-9a48-11ef-a4e4-047c160ef6c1",
@@ -118,7 +119,8 @@
       "endereco": {
         "rua": "Rua dos testes",
         "numero": "400"
-      }
+      },
+      "quantidadePedidos": 1
     },
     {
       "id": "ab80",
@@ -179,6 +181,28 @@
         "rua": "",
         "numero": ""
       }
+    },
+    {
+      "id": "a00d",
+      "idCliente": "ba939995-b60b-4634-937a-759109f7a59a",
+      "nome": "re",
+      "dataCadastro": "re",
+      "endereco": {
+        "rua": "re",
+        "numero": "re"
+      },
+      "quantidadePedidos": 0
+    },
+    {
+      "id": "dd3e",
+      "idCliente": "eecf1906-6d26-465b-b413-831baa9dd411",
+      "nome": "rea",
+      "dataCadastro": "re",
+      "endereco": {
+        "rua": "re",
+        "numero": "re"
+      },
+      "quantidadePedidos": 0
     }
   ],
   "pedidos": [
@@ -298,6 +322,36 @@
       "descricao": "nada",
       "dataPedido": "01/11/2024",
       "dataReceber": "02/11/2024",
+      "pago": false
+    },
+    {
+      "id": "a409",
+      "idPedido": "e659cef7-d1f0-4c57-a95a-55415e997c7a",
+      "nomeCliente": "7494",
+      "valor": 46534,
+      "descricao": "nada",
+      "dataPedido": "01/11/2024",
+      "dataReceber": "08/11/2024",
+      "pago": false
+    },
+    {
+      "id": "e767",
+      "idPedido": "33512240-530f-40c2-89b0-c5fca440c892",
+      "nomeCliente": "0b56",
+      "valor": 3233,
+      "descricao": "12131",
+      "dataPedido": "01/11/2024",
+      "dataReceber": "01/11/2024",
+      "pago": false
+    },
+    {
+      "id": "8f48",
+      "idPedido": "e84103e2-0102-4343-814a-d096fa83f1b5",
+      "nomeCliente": "3b52",
+      "valor": 12412,
+      "descricao": "2rsdgsg",
+      "dataPedido": "01/11/2025",
+      "dataReceber": "01/11/2025",
       "pago": false
     }
   ]

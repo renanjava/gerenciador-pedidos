@@ -25,7 +25,8 @@ class _ClientesCardState extends State<ClientesCard> {
     final fetchedClientes = await service.findAll();
     setState(() {
       clientes = fetchedClientes;
-      //ordenar pela quantidade de pedidos
+      clientes
+          .sort((a, b) => b.quantidadePedidos.compareTo(a.quantidadePedidos));
     });
   }
 
@@ -48,7 +49,7 @@ class _ClientesCardState extends State<ClientesCard> {
                 Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text('Pedidos: 0'),
+                    Text('Pedidos: ${cliente.quantidadePedidos}'),
                     IconButton(
                       icon: const Icon(Icons.edit, size: 20),
                       onPressed: () {},

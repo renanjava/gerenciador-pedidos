@@ -74,15 +74,19 @@ class ClientesFormulario extends StatelessWidget {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
-                onPressed: () {
-                  criaCliente();
-                  Navigator.pop(context);
+                onPressed: () async {
+                  bool clienteExiste = await criaCliente(context);
+                  if (!clienteExiste) {
+                    Navigator.pop(context);
+                  }
                 },
-                child: const Text('Confirmar Cadastro',
-                    style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black)),
+                child: const Text(
+                  'Confirmar Cadastro',
+                  style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black),
+                ),
               ),
             ],
           ),
@@ -107,20 +111,51 @@ class ClientesFormulario extends StatelessWidget {
     );
   }
 
-  void criaCliente() async {
+  Future<bool> criaCliente(context) async {
     ClientesService service = ClientesService();
-    Uuid uuid = const Uuid();
-    Endereco endereco = Endereco(
-      rua: ruaEndereco.text,
-      numero: numeroEndereco.text,
-    );
-    Cliente clienteForm = Cliente(
-      idCliente: uuid.v4(),
-      nome: nome.text,
-      dataCadastro: dataCadastro.text,
-      endereco: endereco,
-    );
+    List<Cliente> clientesExistentes = await service.findAll();
 
-    await service.create(clienteForm);
+    bool clienteExiste =
+        clientesExistentes.any((cliente) => cliente.nome == nome.text);
+
+    if (clienteExiste) {
+      _mostrarMensagemErro('Cliente com este nome já existe.', context);
+      return true;
+    } else {
+      Uuid uuid = const Uuid();
+      Endereco endereco = Endereco(
+        rua: ruaEndereco.text,
+        numero: numeroEndereco.text,
+      );
+      Cliente clienteForm = Cliente(
+        idCliente: uuid.v4(),
+        nome: nome.text,
+        dataCadastro: dataCadastro.text,
+        endereco: endereco,
+      );
+
+      await service.create(clienteForm);
+      return false;
+    }
+  }
+
+  void _mostrarMensagemErro(String mensagem, context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Erro'),
+          content: Text(mensagem),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
