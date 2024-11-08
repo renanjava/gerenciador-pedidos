@@ -44,4 +44,14 @@ class ClientesService {
     }
     throw Exception("Erro ao buscar cliente");
   }
+
+  Future<Cliente> findTopClienteComMaisPedidos() async {
+    List<Cliente> clientes = await findAll();
+
+    clientes.sort((a, b) => b.quantidadePedidos.compareTo(a.quantidadePedidos));
+    if (clientes.isNotEmpty) {
+      return clientes.first;
+    }
+    throw Error();
+  }
 }

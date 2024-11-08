@@ -15,7 +15,7 @@ void main() {
       expect('80777', pedido.idPedido);
     });
 
-    test('Pedido deve ter um ID do Cliente', () {
+    test('Pedido deve ter um Nome do Cliente', () {
       expect('494432', pedido.nomeCliente);
     });
 

@@ -203,127 +203,20 @@
         "numero": "re"
       },
       "quantidadePedidos": 0
+    },
+    {
+      "id": "5c6c",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      },
+      "quantidadePedidos": 0
     }
   ],
   "pedidos": [
-    {
-      "idPedido": "34a68dae-f196-4a0d-95dc-41c440928804",
-      "idCliente": "3e540834-9a48-11ef-b7b4-047c160ef6c1",
-      "valor": 60,
-      "descricao": "pedido feito no balcão",
-      "dataPedido": "15/10/2024",
-      "dataReceber": "04/11/2024",
-      "pago": false,
-      "id": "573d"
-    },
-    {
-      "idPedido": "b3a3c708-aa20-4ab6-9546-0844c5b38740",
-      "idCliente": "3e540834-9a48-11ef-b7b4-047c160ef6c1",
-      "valor": 75.5,
-      "descricao": "pedido online",
-      "dataPedido": "20/10/2024",
-      "dataReceber": "10/11/2024",
-      "pago": false,
-      "id": "dcf2"
-    },
-    {
-      "idPedido": "2ccc44f9-d52a-4984-98a3-89807e052942",
-      "idCliente": "3e540834-9a48-11ef-b7b4-047c160ef6c1",
-      "valor": 30,
-      "descricao": "pedido para entrega",
-      "dataPedido": "25/10/2024",
-      "dataReceber": "12/11/2024",
-      "pago": false,
-      "id": "c7a7"
-    },
-    {
-      "idPedido": "c766f89a-f4ed-475e-b140-ff404b069555",
-      "idCliente": "4b6953e7-9a48-11ef-a4e4-047c160ef6c1",
-      "valor": 45,
-      "descricao": "pedido feito no balcão",
-      "dataPedido": "22/10/2024",
-      "dataReceber": "11/11/2024",
-      "pago": false,
-      "id": "d405"
-    },
-    {
-      "idPedido": "3d553f7e-be5e-47ec-b233-63069b48cc82",
-      "idCliente": "4b6953e7-9a48-11ef-a4e4-047c160ef6c1",
-      "valor": 90,
-      "descricao": "pedido online",
-      "dataPedido": "28/10/2024",
-      "dataReceber": "15/11/2024",
-      "pago": false,
-      "id": "4279"
-    },
-    {
-      "idPedido": "df8f9cd8-f5ac-4ee9-883f-214d09350e83",
-      "idCliente": "c7627de9-4d04-4197-8fca-e0b1704b53d6",
-      "valor": 50,
-      "descricao": "pedido para entrega",
-      "dataPedido": "18/10/2024",
-      "dataReceber": "08/11/2024",
-      "pago": false,
-      "id": "dbbb"
-    },
-    {
-      "idPedido": "b506e5aa-965c-4c31-9c3a-a9bc8c99ee6b",
-      "idCliente": "c7627de9-4d04-4197-8fca-e0b1704b53d6",
-      "valor": 65,
-      "descricao": "pedido feito no balcão",
-      "dataPedido": "30/10/2024",
-      "dataReceber": "18/11/2024",
-      "pago": false,
-      "id": "80fe"
-    },
-    {
-      "idPedido": "7a663ebb-2861-40bc-9745-d7b2f06c9e33",
-      "idCliente": "3e540834-9a48-11ef-b7b4-047c160ef6c1",
-      "valor": 100,
-      "descricao": "pedido especial",
-      "dataPedido": "01/11/2024",
-      "dataReceber": "20/11/2024",
-      "pago": true,
-      "informacoesPagamento": {
-        "dataPagamento": "01/11/2024",
-        "formaPagamento": "transferência bancária"
-      },
-      "id": "8b95"
-    },
-    {
-      "idPedido": "ade2ed63-d22e-4cbd-a33f-5e4a3c206326",
-      "idCliente": "4b6953e7-9a48-11ef-a4e4-047c160ef6c1",
-      "valor": 120,
-      "descricao": "pedido de aniversário",
-      "dataPedido": "05/11/2024",
-      "dataReceber": "25/11/2024",
-      "pago": true,
-      "informacoesPagamento": {
-        "dataPagamento": "05/11/2024",
-        "formaPagamento": "cartão de débito"
-      },
-      "id": "410b"
-    },
-    {
-      "id": "f374",
-      "idPedido": "8371a66e-fba8-460d-8d0c-7b04df534b51",
-      "idCliente": "",
-      "valor": 0,
-      "descricao": "nenhum",
-      "dataPedido": "06/11/2024",
-      "dataReceber": "06/11/2024",
-      "pago": false
-    },
-    {
-      "id": "07c5",
-      "idPedido": "3a0ae43f-fd0f-4d38-83a6-9713cdf2c5aa",
-      "idCliente": "",
-      "valor": 5,
-      "descricao": "nada",
-      "dataPedido": "01/11/2024",
-      "dataReceber": "02/11/2024",
-      "pago": false
-    },
     {
       "id": "a409",
       "idPedido": "e659cef7-d1f0-4c57-a95a-55415e997c7a",

@@ -1,11 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/models/cliente.dart';
+import 'package:gerenciador_pedidos/models/pedido.dart';
+import 'package:gerenciador_pedidos/services/clientes_service.dart';
+import 'package:gerenciador_pedidos/services/pedidos_service.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
 
 const tituloPagina = 'Gerenciamento de Pedidos Pendentes';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
+
+  @override
+  _HomeState createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  late Future<Cliente> _topCliente;
+  late Future<Pedido> _topPedido;
+  late Future<Pedido> _pedidoMaisCaro;
+
+  @override
+  void initState() {
+    super.initState();
+    _topCliente = ClientesService().findTopClienteComMaisPedidos();
+    _topPedido = PedidosService().findTopPedido();
+    _pedidoMaisCaro = PedidosService().findPedidoMaisCaro();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +52,9 @@ class Home extends StatelessWidget {
         body: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            _buildSection(),
-            _buildSection(),
-            _buildSection(),
+            _buildTopClienteSection(),
+            _buildTopPedidoSection(),
+            _buildPedidoMaisCaroSection(),
           ],
         ),
         bottomNavigationBar: const NavigationBarComponent(),
@@ -41,51 +62,193 @@ class Home extends StatelessWidget {
     );
   }
 
-  Widget _buildSection() {
+  Widget _buildTopClienteSection() {
     return Padding(
       padding: const EdgeInsets.all(50),
-      child: Column(
-        children: [
-          const Text(
-            '...',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-          ),
-          const SizedBox(height: 20),
-          Container(
-            height: 300,
-            width: double.infinity,
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.indigo[50],
-              borderRadius: BorderRadius.circular(15),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
-                  spreadRadius: 2,
-                  blurRadius: 8,
-                  offset: const Offset(0, 4),
+      child: FutureBuilder<Cliente>(
+        future: _topCliente,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const CircularProgressIndicator();
+          } else if (snapshot.hasError) {
+            return Text('Erro: ${snapshot.error}');
+          } else if (snapshot.hasData) {
+            Cliente cliente = snapshot.data!;
+            return Column(
+              children: [
+                Text(
+                  'Top Cliente: ${cliente.nome}',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
                 ),
-              ],
-            ),
-            child: Center(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.assignment, color: Colors.indigo[800], size: 40),
-                  const SizedBox(width: 10),
-                  Text(
-                    'Conteúdo do Pedido',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.indigo[800],
-                      fontWeight: FontWeight.bold,
+                const SizedBox(height: 20),
+                Container(
+                  height: 300,
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.indigo[50],
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3),
+                        spreadRadius: 2,
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.assignment,
+                            color: Colors.indigo[800], size: 40),
+                        const SizedBox(width: 10),
+                        Text(
+                          '${cliente.nome} tem ${cliente.quantidadePedidos} pedidos',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.indigo[800],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                ],
-              ),
-            ),
-          ),
-        ],
+                ),
+              ],
+            );
+          } else {
+            return const Text('Nenhum cliente encontrado.');
+          }
+        },
+      ),
+    );
+  }
+
+  Widget _buildTopPedidoSection() {
+    return Padding(
+      padding: const EdgeInsets.all(50),
+      child: FutureBuilder<Pedido>(
+        future: _topPedido,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const CircularProgressIndicator();
+          } else if (snapshot.hasError) {
+            return Text('Erro: ${snapshot.error}');
+          } else if (snapshot.hasData) {
+            Pedido pedido = snapshot.data!;
+            return Column(
+              children: [
+                Text(
+                  'Top Pedido: ${pedido.descricao}',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 300,
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.indigo[50],
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3),
+                        spreadRadius: 2,
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.shopping_cart,
+                            color: Colors.indigo[800], size: 40),
+                        const SizedBox(width: 10),
+                        Text(
+                          'Pedido expirado por mais tempo: ${pedido.descricao}',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.indigo[800],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            );
+          } else {
+            return const Text('Nenhum pedido encontrado.');
+          }
+        },
+      ),
+    );
+  }
+
+  Widget _buildPedidoMaisCaroSection() {
+    return Padding(
+      padding: const EdgeInsets.all(50),
+      child: FutureBuilder<Pedido>(
+        future: _pedidoMaisCaro,
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const CircularProgressIndicator();
+          } else if (snapshot.hasError) {
+            return Text('Erro: ${snapshot.error}');
+          } else if (snapshot.hasData) {
+            Pedido pedido = snapshot.data!;
+            return Column(
+              children: [
+                Text(
+                  'Pedido Mais Caro: ${pedido.descricao}',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(height: 20),
+                Container(
+                  height: 300,
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(16),
+                  decoration: BoxDecoration(
+                    color: Colors.indigo[50],
+                    borderRadius: BorderRadius.circular(15),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3),
+                        spreadRadius: 2,
+                        blurRadius: 8,
+                        offset: const Offset(0, 4),
+                      ),
+                    ],
+                  ),
+                  child: Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.money, color: Colors.indigo[800], size: 40),
+                        const SizedBox(width: 10),
+                        Text(
+                          'Pedido mais caro: ${pedido.descricao}, Valor: ${pedido.valor} R\$',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Colors.indigo[800],
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            );
+          } else {
+            return const Text('Nenhum pedido encontrado.');
+          }
+        },
       ),
     );
   }

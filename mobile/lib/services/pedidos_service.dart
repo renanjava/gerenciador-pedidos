@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/models/pedido.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:intl/intl.dart';
 
 class PedidosService {
   Future<List<Pedido>> findAll() async {
@@ -56,6 +57,65 @@ class PedidosService {
 
     if (response.statusCode != 200) {
       throw Exception('Erro ao atualizar a quantidade de pedidos do cliente');
+    }
+  }
+
+  Future<Pedido> findTopPedido() async {
+    try {
+      final response =
+          await http.get(Uri.parse("http://localhost:3000/pedidos"));
+
+      if (response.statusCode == 200) {
+        List<dynamic> pedidosJson = json.decode(response.body);
+
+        Pedido topPedido = Pedido.fromJson(pedidosJson[0]);
+        int maiorDistancia = 0;
+
+        DateFormat dateFormat = DateFormat('dd/MM/yyyy');
+
+        for (var pedido in pedidosJson) {
+          Pedido p = Pedido.fromJson(pedido);
+
+          DateTime dataReceber = dateFormat.parse(p.dataReceber);
+          int distancia = DateTime.now().difference(dataReceber).inMilliseconds;
+
+          if (distancia > maiorDistancia) {
+            maiorDistancia = distancia;
+            topPedido = p;
+          }
+        }
+
+        return topPedido;
+      } else {
+        throw Exception('Falha ao carregar pedidos');
+      }
+    } catch (e) {
+      rethrow;
+    }
+  }
+
+  Future<Pedido> findPedidoMaisCaro() async {
+    try {
+      final response =
+          await http.get(Uri.parse("http://localhost:3000/pedidos"));
+
+      if (response.statusCode == 200) {
+        List<dynamic> pedidosJson = json.decode(response.body);
+
+        Pedido pedidoMaisCaro = Pedido.fromJson(pedidosJson[0]);
+        for (var pedido in pedidosJson) {
+          Pedido p = Pedido.fromJson(pedido);
+          if (p.valor > pedidoMaisCaro.valor) {
+            pedidoMaisCaro = p;
+          }
+        }
+
+        return pedidoMaisCaro;
+      } else {
+        throw Exception('Falha ao carregar pedidos');
+      }
+    } catch (e) {
+      rethrow;
     }
   }
 }
