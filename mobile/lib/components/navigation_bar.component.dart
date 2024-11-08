@@ -23,7 +23,7 @@ class NavigationBarComponentState extends State<NavigationBarComponent> {
     setState(() {
       _selectedIndex = index;
     });
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) => _pages[index]),
     );
@@ -31,23 +31,28 @@ class NavigationBarComponentState extends State<NavigationBarComponent> {
 
   @override
   Widget build(BuildContext context) {
-    return NavigationBar(
-      selectedIndex: _selectedIndex,
-      onDestinationSelected: _onItemTapped,
-      destinations: const [
-        NavigationDestination(
-          icon: Icon(Icons.home_outlined),
-          label: 'Início',
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 260),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 0),
+        child: NavigationBar(
+          onDestinationSelected: _onItemTapped,
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.home_outlined),
+              label: 'Início',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.account_circle),
+              label: 'Clientes',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.backup_table),
+              label: 'Pedidos',
+            ),
+          ],
         ),
-        NavigationDestination(
-          icon: Icon(Icons.account_circle),
-          label: 'Clientes',
-        ),
-        NavigationDestination(
-          icon: Icon(Icons.backup_table),
-          label: 'Pedidos',
-        ),
-      ],
+      ),
     );
   }
 }

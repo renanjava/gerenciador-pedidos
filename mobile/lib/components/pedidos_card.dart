@@ -50,10 +50,6 @@ class _PedidosCardState extends State<PedidosCard> {
                   children: [
                     Text('${pedido.dataPedido} - ${pedido.dataReceber}'),
                     IconButton(
-                      icon: const Icon(Icons.edit, size: 20),
-                      onPressed: () {},
-                    ),
-                    IconButton(
                       icon: const Icon(Icons.delete, size: 20),
                       onPressed: () {},
                     ),

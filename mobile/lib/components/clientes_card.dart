@@ -51,10 +51,6 @@ class _ClientesCardState extends State<ClientesCard> {
                   children: [
                     Text('Pedidos: ${cliente.quantidadePedidos}'),
                     IconButton(
-                      icon: const Icon(Icons.edit, size: 20),
-                      onPressed: () {},
-                    ),
-                    IconButton(
                       icon: const Icon(Icons.delete, size: 20),
                       onPressed: () {},
                     ),
