@@ -159,6 +159,26 @@
         "rua": "aaa",
         "numero": "aaa"
       }
+    },
+    {
+      "id": "e2ea",
+      "idCliente": "948040",
+      "nome": "tester",
+      "dataCadastro": "00/00/0000",
+      "endereco": {
+        "rua": "Rua dos testes",
+        "numero": "400"
+      }
+    },
+    {
+      "id": "0fde",
+      "idCliente": "484d2472-e475-4f46-b62f-682d5d652f19",
+      "nome": "",
+      "dataCadastro": "",
+      "endereco": {
+        "rua": "",
+        "numero": ""
+      }
     }
   ],
   "pedidos": [

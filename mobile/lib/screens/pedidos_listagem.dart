@@ -15,17 +15,39 @@ class PedidosListagem extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text(
-              '$tituloPagina - ${dataAtual.day}/${dataAtual.month}/${dataAtual.year}'),
-          backgroundColor: Colors.blue,
+            '$tituloPagina - ${dataAtual.day}/${dataAtual.month}/${dataAtual.year}',
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 18,
+            ),
+          ),
+          centerTitle: true,
+          backgroundColor: Colors.blue.shade700,
+          elevation: 6.0,
+          shadowColor: Colors.blueAccent,
         ),
-        body: const Padding(
-          padding: EdgeInsets.fromLTRB(
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(
             130.0,
             30.0,
             130.0,
             30.0,
           ),
-          child: PedidosCard(),
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  blurRadius: 8.0,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
+            child: const PedidosCard(),
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.push(

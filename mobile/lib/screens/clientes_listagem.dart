@@ -13,17 +13,40 @@ class ClientesListagem extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(tituloPagina),
-          backgroundColor: Colors.blue,
+          title: const Text(
+            tituloPagina,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1.2,
+            ),
+          ),
+          backgroundColor: Colors.blue.shade700,
+          centerTitle: true,
+          elevation: 4.0,
+          shadowColor: Colors.blueAccent,
         ),
-        body: const Padding(
-          padding: EdgeInsets.fromLTRB(
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(
             130.0,
             30.0,
             130.0,
             30.0,
           ),
-          child: ClientesCard(),
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  blurRadius: 8.0,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
+            child: const ClientesCard(),
+          ),
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.push(
