@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/constants/icones.dart';
 import 'package:gerenciador_pedidos/screens/clientes_listagem.dart';
 import 'package:gerenciador_pedidos/screens/home.dart';
 import 'package:gerenciador_pedidos/screens/pedidos_listagem.dart';
@@ -39,15 +40,15 @@ class NavigationBarComponentState extends State<NavigationBarComponent> {
           onDestinationSelected: _onItemTapped,
           destinations: const [
             NavigationDestination(
-              icon: Icon(Icons.home_outlined),
+              icon: Icon(Icones.iconeHome),
               label: 'Início',
             ),
             NavigationDestination(
-              icon: Icon(Icons.account_circle),
+              icon: Icon(Icones.iconeCliente),
               label: 'Clientes',
             ),
             NavigationDestination(
-              icon: Icon(Icons.backup_table),
+              icon: Icon(Icones.iconePedido),
               label: 'Pedidos',
             ),
           ],

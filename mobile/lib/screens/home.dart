@@ -101,8 +101,6 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.assignment,
-                            color: Colors.indigo[800], size: 40),
                         const SizedBox(width: 10),
                         Text(
                           '${cliente.nome} tem ${cliente.quantidadePedidos} pedidos',
@@ -165,8 +163,6 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.shopping_cart,
-                            color: Colors.indigo[800], size: 40),
                         const SizedBox(width: 10),
                         Text(
                           'Pedido expirado por mais tempo: ${pedido.descricao}',
@@ -229,7 +225,6 @@ class _HomeState extends State<Home> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.money, color: Colors.indigo[800], size: 40),
                         const SizedBox(width: 10),
                         Text(
                           'Pedido mais caro: ${pedido.descricao}, Valor: ${pedido.valor} R\$',

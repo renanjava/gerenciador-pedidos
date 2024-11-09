@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gerenciador_pedidos/components/navigation_bar.component.dart';
+import 'package:gerenciador_pedidos/constants/icones.dart';
 import 'package:gerenciador_pedidos/models/cliente.dart';
 import 'package:gerenciador_pedidos/others/endereco.dart';
 import 'package:gerenciador_pedidos/services/clientes_service.dart';
@@ -50,7 +51,7 @@ class ClientesFormulario extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 20),
-              _buildTextField(nome, 'Nome', Icons.account_circle_outlined),
+              _buildTextField(nome, 'Nome', Icones.iconeCliente),
               const SizedBox(height: 20),
               _buildTextField(dataCadastro, 'Data de Cadastro',
                   Icons.date_range, TextInputType.datetime),

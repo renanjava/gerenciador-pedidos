@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/constants/icones.dart';
 import 'package:gerenciador_pedidos/models/pedido.dart';
 import 'package:gerenciador_pedidos/services/pedidos_service.dart';
 
@@ -38,7 +39,7 @@ class _PedidosCardState extends State<PedidosCard> {
         return Card(
           color: atribuirCor(pedido.dataReceber),
           child: ListTile(
-            leading: const Icon(Icons.backup_table),
+            leading: const Icon(Icones.iconePedido),
             title: Text(pedidoValor),
             subtitle: Text(pedido.descricao),
             trailing: Column(

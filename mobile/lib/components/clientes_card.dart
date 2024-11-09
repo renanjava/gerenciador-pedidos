@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gerenciador_pedidos/constants/icones.dart';
 import 'package:gerenciador_pedidos/models/cliente.dart';
 import 'package:gerenciador_pedidos/services/clientes_service.dart';
 
@@ -38,7 +39,7 @@ class _ClientesCardState extends State<ClientesCard> {
         final cliente = clientes[index];
         return Card(
           child: ListTile(
-            leading: const Icon(Icons.account_circle_outlined),
+            leading: const Icon(Icones.iconeCliente),
             title: Text(cliente.nome),
             subtitle:
                 Text('${cliente.endereco.rua}, ${cliente.endereco.numero}'),

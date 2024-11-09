@@ -10,241 +10,27 @@
       },
       "id": "0b56",
       "quantidadePedidos": 1
-    },
-    {
-      "idCliente": "4b6953e7-9a48-11ef-a4e4-047c160ef6c1",
-      "nome": "juliana",
-      "dataCadastro": "30/10/2024",
-      "endereco": {
-        "rua": "osvaldo fernandes",
-        "numero": "435"
-      },
-      "id": "7494"
-    },
-    {
-      "idCliente": "c7627de9-4d04-4197-8fca-e0b1704b53d6",
-      "nome": "denizia",
-      "dataCadastro": "30/10/2024",
-      "endereco": {
-        "rua": "orquideas",
-        "numero": "11"
-      },
-      "id": "e534"
-    },
-    {
-      "id": "cada",
-      "idCliente": "5bdb849e-fe1e-41b9-8d83-5c5c7c9b6dce",
-      "nome": "j",
-      "dataCadastro": "j",
-      "endereco": {
-        "rua": "j",
-        "numero": "j"
-      }
-    },
-    {
-      "id": "99e1",
-      "idCliente": "757482fa-615d-4e7f-b023-177c285d3e6b",
-      "nome": "j",
-      "dataCadastro": "j",
-      "endereco": {
-        "rua": "j",
-        "numero": "j"
-      }
-    },
-    {
-      "id": "7a17",
-      "idCliente": "bf3f9c3b-17bf-401b-9ba8-6e61345b3d80",
-      "nome": "j",
-      "dataCadastro": "j",
-      "endereco": {
-        "rua": "j",
-        "numero": "j"
-      }
-    },
-    {
-      "id": "d0a5",
-      "idCliente": "ba87fdf5-3674-406f-8f98-a7c820b41e17",
-      "nome": "klkql",
-      "dataCadastro": "kjkj",
-      "endereco": {
-        "rua": "ljlj",
-        "numero": "ljj"
-      }
-    },
-    {
-      "id": "968d",
-      "idCliente": "d533b396-f4fc-447d-9ff5-908ab4102501",
-      "nome": "a",
-      "dataCadastro": "a",
-      "endereco": {
-        "rua": "a",
-        "numero": "a"
-      }
-    },
-    {
-      "id": "2d7f",
-      "idCliente": "b9275afe-46f3-4c34-8642-a38bd3fa303e",
-      "nome": "k",
-      "dataCadastro": "k",
-      "endereco": {
-        "rua": "k",
-        "numero": "k"
-      }
-    },
-    {
-      "id": "2214",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      }
-    },
-    {
-      "id": "8547",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      }
-    },
-    {
-      "id": "3b52",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      },
-      "quantidadePedidos": 1
-    },
-    {
-      "id": "ab80",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      }
-    },
-    {
-      "id": "b3cc",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      }
-    },
-    {
-      "id": "e148",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      }
-    },
-    {
-      "id": "8f96",
-      "idCliente": "39649440-504f-4ec7-b662-b774b2f015f5",
-      "nome": "aa",
-      "dataCadastro": "aaa",
-      "endereco": {
-        "rua": "aaa",
-        "numero": "aaa"
-      }
-    },
-    {
-      "id": "e2ea",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      }
-    },
-    {
-      "id": "0fde",
-      "idCliente": "484d2472-e475-4f46-b62f-682d5d652f19",
-      "nome": "",
-      "dataCadastro": "",
-      "endereco": {
-        "rua": "",
-        "numero": ""
-      }
-    },
-    {
-      "id": "a00d",
-      "idCliente": "ba939995-b60b-4634-937a-759109f7a59a",
-      "nome": "re",
-      "dataCadastro": "re",
-      "endereco": {
-        "rua": "re",
-        "numero": "re"
-      },
-      "quantidadePedidos": 0
-    },
-    {
-      "id": "dd3e",
-      "idCliente": "eecf1906-6d26-465b-b413-831baa9dd411",
-      "nome": "rea",
-      "dataCadastro": "re",
-      "endereco": {
-        "rua": "re",
-        "numero": "re"
-      },
-      "quantidadePedidos": 0
-    },
-    {
-      "id": "5c6c",
-      "idCliente": "948040",
-      "nome": "tester",
-      "dataCadastro": "00/00/0000",
-      "endereco": {
-        "rua": "Rua dos testes",
-        "numero": "400"
-      },
-      "quantidadePedidos": 0
     }
   ],
   "pedidos": [
     {
-      "id": "a409",
-      "idPedido": "e659cef7-d1f0-4c57-a95a-55415e997c7a",
-      "nomeCliente": "7494",
-      "valor": 46534,
-      "descricao": "nada",
-      "dataPedido": "01/11/2024",
+      "id": "0c02",
+      "idPedido": "09d91e33-ff8c-425a-95d8-18eb26d9a516",
+      "nomeCliente": "0b56",
+      "valor": 10,
+      "descricao": "cartão não passou",
+      "dataPedido": "08/11/2024",
       "dataReceber": "08/11/2024",
       "pago": false
     },
     {
-      "id": "e767",
-      "idPedido": "33512240-530f-40c2-89b0-c5fca440c892",
+      "id": "30dd",
+      "idPedido": "798dbaec-d57d-401d-aa16-25b5de22d60f",
       "nomeCliente": "0b56",
-      "valor": 3233,
-      "descricao": "12131",
+      "valor": 40,
+      "descricao": "marcou",
       "dataPedido": "01/11/2024",
-      "dataReceber": "01/11/2024",
-      "pago": false
-    },
-    {
-      "id": "8f48",
-      "idPedido": "e84103e2-0102-4343-814a-d096fa83f1b5",
-      "nomeCliente": "3b52",
-      "valor": 12412,
-      "descricao": "2rsdgsg",
-      "dataPedido": "01/11/2025",
-      "dataReceber": "01/11/2025",
+      "dataReceber": "08/11/2024",
       "pago": false
     }
   ]
