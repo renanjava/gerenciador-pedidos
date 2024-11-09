@@ -4,7 +4,6 @@ import 'package:gerenciador_pedidos/constants/icones.dart';
 import 'package:gerenciador_pedidos/models/cliente.dart';
 import 'package:gerenciador_pedidos/others/endereco.dart';
 import 'package:gerenciador_pedidos/services/clientes_service.dart';
-import 'package:uuid/uuid.dart';
 
 const tituloPagina = 'Formulário de Clientes';
 
@@ -123,13 +122,11 @@ class ClientesFormulario extends StatelessWidget {
       _mostrarMensagemErro('Cliente com este nome já existe.', context);
       return true;
     } else {
-      Uuid uuid = const Uuid();
       Endereco endereco = Endereco(
         rua: ruaEndereco.text,
         numero: numeroEndereco.text,
       );
       Cliente clienteForm = Cliente(
-        idCliente: uuid.v4(),
         nome: nome.text,
         dataCadastro: dataCadastro.text,
         endereco: endereco,

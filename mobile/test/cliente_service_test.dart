@@ -9,7 +9,6 @@ void main() {
         Cliente cliente = Cliente(
             dataCadastro: '00/00/0000',
             nome: 'tester',
-            idCliente: '948040',
             endereco: endereco,
         );
         

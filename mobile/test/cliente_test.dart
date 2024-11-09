@@ -8,7 +8,6 @@ void main() {
     Cliente cliente = Cliente(
       dataCadastro: '00/00/0000',
       nome: 'tester',
-      idCliente: '948040',
       endereco: endereco,
     );
 
@@ -18,10 +17,6 @@ void main() {
 
     test('Cliente deve ter um Nome', () {
       expect('tester', cliente.nome);
-    });
-
-    test('Cliente deve ter um ID', () {
-      expect('948040', cliente.idCliente);
     });
 
     test('Cliente deve ter um Endereço', () {

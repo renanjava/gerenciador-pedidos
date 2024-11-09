@@ -41,7 +41,7 @@ class _PedidosCardState extends State<PedidosCard> {
           child: ListTile(
             leading: const Icon(Icones.iconePedido),
             title: Text(pedidoValor),
-            subtitle: Text(pedido.descricao),
+            subtitle: Text(pedido.nomeCliente),
             trailing: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.end,

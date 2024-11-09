@@ -10,27 +10,57 @@
       },
       "id": "0b56",
       "quantidadePedidos": 1
+    },
+    {
+      "id": "0989",
+      "nome": "juliana",
+      "dataCadastro": "11/11/1111",
+      "endereco": {
+        "rua": "orquideas",
+        "numero": "352"
+      },
+      "quantidadePedidos": 0
     }
   ],
   "pedidos": [
     {
-      "id": "0c02",
-      "idPedido": "09d91e33-ff8c-425a-95d8-18eb26d9a516",
-      "nomeCliente": "0b56",
-      "valor": 10,
-      "descricao": "cartão não passou",
-      "dataPedido": "08/11/2024",
-      "dataReceber": "08/11/2024",
+      "id": "5715",
+      "idPedido": "496520b9-02cf-404b-8749-b04abe980ea2",
+      "nomeCliente": "renan",
+      "valor": 4444,
+      "descricao": "dfhfdhfddfh",
+      "dataPedido": "21/21/2111",
+      "dataReceber": "21/21/2111",
       "pago": false
     },
     {
-      "id": "30dd",
-      "idPedido": "798dbaec-d57d-401d-aa16-25b5de22d60f",
-      "nomeCliente": "0b56",
-      "valor": 40,
-      "descricao": "marcou",
-      "dataPedido": "01/11/2024",
-      "dataReceber": "08/11/2024",
+      "id": "7f70",
+      "idPedido": "812f67ed-aa49-4db3-93b9-6beb161ab3f2",
+      "nomeCliente": "renan",
+      "valor": 50,
+      "descricao": "asuhudhas",
+      "dataPedido": "11/11/1111",
+      "dataReceber": "11/11/1111",
+      "pago": false
+    },
+    {
+      "id": "bdb9",
+      "idPedido": "7f226d61-b728-420b-bb4c-828d36c73260",
+      "nomeCliente": "juliana",
+      "valor": 5433,
+      "descricao": "nada",
+      "dataPedido": "11/11/1111",
+      "dataReceber": "11/11/1111",
+      "pago": false
+    },
+    {
+      "id": "d133",
+      "idPedido": "ce5b7144-72c8-4f8b-9b07-ac81cbb0aa34",
+      "nomeCliente": "juliana",
+      "valor": 0,
+      "descricao": "a",
+      "dataPedido": "11/11/1111",
+      "dataReceber": "11/11/1111",
       "pago": false
     }
   ]

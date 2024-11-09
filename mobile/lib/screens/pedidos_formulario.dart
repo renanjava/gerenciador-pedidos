@@ -35,7 +35,7 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
     var fetchedClientes = await clientesService.findAll();
     setState(() {
       clientes = fetchedClientes.map((cliente) {
-        return {'id': cliente.idCliente, 'nome': cliente.nome};
+        return {'nome': cliente.nome};
       }).toList();
     });
   }
@@ -128,7 +128,7 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
       ),
       items: clientes.map((cliente) {
         return DropdownMenuItem<String>(
-          value: cliente['id'],
+          value: cliente['nome'],
           child: Text(cliente['nome']),
         );
       }).toList(),
@@ -170,7 +170,8 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
 
     await service.create(pedidoForm);
     final clienteSelecionado =
-        clientes.firstWhere((cliente) => cliente['id'] == nomeCliente.text);
+        clientes.firstWhere((cliente) => cliente['nome'] == nomeCliente.text);
+    debugPrint("$clienteSelecionado");
     final novaQuantidadePedidos =
         (clienteSelecionado['quantidadePedidos'] ?? 0) + 1;
     await service.atualizarQuantidadePedidos(
