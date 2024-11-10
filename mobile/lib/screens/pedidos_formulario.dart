@@ -23,6 +23,7 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
   final TextEditingController dataReceber = TextEditingController();
 
   List<Map<String, dynamic>> clientes = [];
+  ClientesService clientesService = ClientesService();
 
   @override
   void initState() {
@@ -31,7 +32,6 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
   }
 
   Future<void> _fetchClientes() async {
-    ClientesService clientesService = ClientesService();
     var fetchedClientes = await clientesService.findAll();
     setState(() {
       clientes = fetchedClientes.map((cliente) {
@@ -160,7 +160,7 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
     Uuid uuid = const Uuid();
 
     Pedido pedidoForm = Pedido(
-      idPedido: uuid.v4(),
+      id: uuid.v4(),
       nomeCliente: nomeCliente.text,
       valor: double.tryParse(valor.text) ?? 0.0,
       descricao: descricao.text,
@@ -169,12 +169,12 @@ class _PedidosFormularioState extends State<PedidosFormulario> {
     );
 
     await service.create(pedidoForm);
+    final idCliente = await clientesService.findIdByName(nomeCliente.text);
     final clienteSelecionado =
-        clientes.firstWhere((cliente) => cliente['nome'] == nomeCliente.text);
-    debugPrint("$clienteSelecionado");
+        await clientesService.findById(idCliente.toString());
     final novaQuantidadePedidos =
-        (clienteSelecionado['quantidadePedidos'] ?? 0) + 1;
+        (clienteSelecionado.quantidadePedidos ?? 0) + 1;
     await service.atualizarQuantidadePedidos(
-        clienteSelecionado['id'], novaQuantidadePedidos);
+        clienteSelecionado.id.toString(), novaQuantidadePedidos);
   }
 }

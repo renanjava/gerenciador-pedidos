@@ -4,15 +4,15 @@ import 'package:gerenciador_pedidos/models/pedido.dart';
 void main() {
   group('Testando atributos do Pedido', () {
     Pedido pedido = Pedido(
-        idPedido: '80777',
+        id: '80777',
         nomeCliente: '494432',
         valor: 32.00,
         descricao: 'Cartão não passou na hora da entrega',
         dataPedido: '31/10/2024',
         dataReceber: '01/11/2024');
 
-    test('Pedido deve ter um ID do Pedido', () {
-      expect('80777', pedido.idPedido);
+    test('Pedido deve ter um ID', () {
+      expect('80777', pedido.id);
     });
 
     test('Pedido deve ter um Nome do Cliente', () {

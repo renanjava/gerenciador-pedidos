@@ -45,6 +45,14 @@ class ClientesService {
     throw Exception("Erro ao buscar cliente");
   }
 
+  Future<String?> findIdByName(String nome) async {
+    var clientes = await findAll();
+    var clienteSelecionado =
+        clientes.firstWhere((cliente) => cliente.nome == nome);
+
+    return clienteSelecionado.id;
+  }
+
   Future<Cliente> findTopClienteComMaisPedidos() async {
     List<Cliente> clientes = await findAll();
 

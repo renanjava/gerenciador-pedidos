@@ -1,66 +1,71 @@
 {
   "clientes": [
     {
-      "idCliente": "3e540834-9a48-11ef-b7b4-047c160ef6c1",
-      "nome": "renan",
-      "dataCadastro": "30/10/2024",
+      "id": "c728d597-4bb3-4487-bbb7-70f8e4afa7e1",
+      "nome": "denizia",
+      "dataCadastro": "01/01/2023",
       "endereco": {
-        "rua": "expedicionarios",
-        "numero": "2680"
+        "rua": "orquideas",
+        "numero": "3333"
       },
-      "id": "0b56",
+      "quantidadePedidos": 3
+    },
+    {
+      "id": "a9452597-22ad-4430-932e-75f9fd5d4004",
+      "nome": "tester",
+      "dataCadastro": "04/02/2022",
+      "endereco": {
+        "rua": "tester",
+        "numero": "2345"
+      },
       "quantidadePedidos": 1
     },
     {
-      "id": "0989",
-      "nome": "juliana",
-      "dataCadastro": "11/11/1111",
+      "id": "c2d74b56-be46-41a6-b3e2-9fa6cce152ef",
+      "nome": "renan",
+      "dataCadastro": "09/11/2024",
       "endereco": {
         "rua": "orquideas",
-        "numero": "352"
+        "numero": "11"
       },
       "quantidadePedidos": 0
     }
   ],
   "pedidos": [
     {
-      "id": "5715",
-      "idPedido": "496520b9-02cf-404b-8749-b04abe980ea2",
-      "nomeCliente": "renan",
-      "valor": 4444,
-      "descricao": "dfhfdhfddfh",
-      "dataPedido": "21/21/2111",
-      "dataReceber": "21/21/2111",
+      "id": "f6a9155d-4f26-46a6-a293-65b921a107db",
+      "nomeCliente": "denizia",
+      "valor": 11,
+      "descricao": "aa",
+      "dataPedido": "01/12/2023",
+      "dataReceber": "01/12/2023",
       "pago": false
     },
     {
-      "id": "7f70",
-      "idPedido": "812f67ed-aa49-4db3-93b9-6beb161ab3f2",
-      "nomeCliente": "renan",
-      "valor": 50,
-      "descricao": "asuhudhas",
-      "dataPedido": "11/11/1111",
-      "dataReceber": "11/11/1111",
-      "pago": false
-    },
-    {
-      "id": "bdb9",
-      "idPedido": "7f226d61-b728-420b-bb4c-828d36c73260",
-      "nomeCliente": "juliana",
-      "valor": 5433,
+      "id": "35c5aaa6-c2f8-4993-bf41-f167161854d3",
+      "nomeCliente": "tester",
+      "valor": 1000,
       "descricao": "nada",
-      "dataPedido": "11/11/1111",
-      "dataReceber": "11/11/1111",
+      "dataPedido": "09/11/2024",
+      "dataReceber": "09/11/2024",
       "pago": false
     },
     {
-      "id": "d133",
-      "idPedido": "ce5b7144-72c8-4f8b-9b07-ac81cbb0aa34",
-      "nomeCliente": "juliana",
-      "valor": 0,
-      "descricao": "a",
-      "dataPedido": "11/11/1111",
-      "dataReceber": "11/11/1111",
+      "id": "7b31144f-91eb-4241-9ab3-909b71612209",
+      "nomeCliente": "denizia",
+      "valor": 10,
+      "descricao": "nenhuma",
+      "dataPedido": "09/11/2024",
+      "dataReceber": "09/12/2024",
+      "pago": false
+    },
+    {
+      "id": "92329601-8bce-4615-97bb-38685aafff34",
+      "nomeCliente": "denizia",
+      "valor": 11,
+      "descricao": "nada",
+      "dataPedido": "09/11/2024",
+      "dataReceber": "13/11/2024",
       "pago": false
     }
   ]

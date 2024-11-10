@@ -4,6 +4,7 @@ import 'package:gerenciador_pedidos/constants/icones.dart';
 import 'package:gerenciador_pedidos/models/cliente.dart';
 import 'package:gerenciador_pedidos/others/endereco.dart';
 import 'package:gerenciador_pedidos/services/clientes_service.dart';
+import 'package:uuid/uuid.dart';
 
 const tituloPagina = 'Formulário de Clientes';
 
@@ -112,6 +113,7 @@ class ClientesFormulario extends StatelessWidget {
   }
 
   Future<bool> criaCliente(context) async {
+    Uuid uuid = const Uuid();
     ClientesService service = ClientesService();
     List<Cliente> clientesExistentes = await service.findAll();
 
@@ -127,6 +129,7 @@ class ClientesFormulario extends StatelessWidget {
         numero: numeroEndereco.text,
       );
       Cliente clienteForm = Cliente(
+        id: uuid.v4(),
         nome: nome.text,
         dataCadastro: dataCadastro.text,
         endereco: endereco,

@@ -77,8 +77,9 @@ class _HomeState extends State<Home> {
             return Column(
               children: [
                 Text(
-                  'Top Cliente: ${cliente.nome}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Cliente com a maior quantidade de pedidos pendentes: ${cliente.nome}',
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(height: 20),
                 Container(
@@ -103,7 +104,7 @@ class _HomeState extends State<Home> {
                       children: [
                         const SizedBox(width: 10),
                         Text(
-                          '${cliente.nome} tem ${cliente.quantidadePedidos} pedidos',
+                          'O cliente ${cliente.nome} tem ${cliente.quantidadePedidos} pedidos a receber',
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.indigo[800],
@@ -139,8 +140,9 @@ class _HomeState extends State<Home> {
             return Column(
               children: [
                 Text(
-                  'Top Pedido: ${pedido.descricao}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Pedido expirado por mais tempo, data a receber: ${pedido.dataReceber}',
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(height: 20),
                 Container(
@@ -165,7 +167,7 @@ class _HomeState extends State<Home> {
                       children: [
                         const SizedBox(width: 10),
                         Text(
-                          'Pedido expirado por mais tempo: ${pedido.descricao}',
+                          'Pedido expirado por mais tempo é do cliente: ${pedido.nomeCliente}',
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.indigo[800],
@@ -201,8 +203,9 @@ class _HomeState extends State<Home> {
             return Column(
               children: [
                 Text(
-                  'Pedido Mais Caro: ${pedido.descricao}',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+                  'Pedido mais caro: R\$ ${pedido.valor}',
+                  style: const TextStyle(
+                      fontSize: 20, fontWeight: FontWeight.w500),
                 ),
                 const SizedBox(height: 20),
                 Container(
@@ -227,7 +230,7 @@ class _HomeState extends State<Home> {
                       children: [
                         const SizedBox(width: 10),
                         Text(
-                          'Pedido mais caro: ${pedido.descricao}, Valor: ${pedido.valor} R\$',
+                          'Cliente: ${pedido.nomeCliente}, Valor: R\$ ${pedido.valor}',
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.indigo[800],

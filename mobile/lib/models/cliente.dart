@@ -1,6 +1,8 @@
 import 'package:gerenciador_pedidos/others/endereco.dart';
+import 'package:uuid/uuid.dart';
 
 class Cliente {
+  final String? id;
   final String nome;
   final String dataCadastro;
   final Endereco endereco;
@@ -11,10 +13,12 @@ class Cliente {
     required this.dataCadastro,
     required this.endereco,
     this.quantidadePedidos = 0,
+    this.id,
   });
 
   factory Cliente.fromJson(Map<String, dynamic> json) {
     return Cliente(
+      id: json['id'],
       nome: json['nome'],
       dataCadastro: json['dataCadastro'],
       endereco: Endereco.fromJson(json['endereco']),
@@ -24,6 +28,7 @@ class Cliente {
 
   Map<String, dynamic> toJson() {
     return {
+      'id': id,
       'nome': nome,
       'dataCadastro': dataCadastro,
       'endereco': endereco.toJson(),
@@ -33,6 +38,6 @@ class Cliente {
 
   @override
   String toString() {
-    return 'Cliente{nome: $nome, dataCadastro: $dataCadastro, endereco: ${endereco.toString()}, quantidadePedidos: $quantidadePedidos}';
+    return 'Cliente{id: $id, nome: $nome, dataCadastro: $dataCadastro, endereco: ${endereco.toString()}, quantidadePedidos: $quantidadePedidos}';
   }
 }

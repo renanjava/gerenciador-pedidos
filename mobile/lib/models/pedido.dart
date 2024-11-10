@@ -1,5 +1,5 @@
 class Pedido {
-  final String idPedido;
+  final String id;
   final String nomeCliente;
   final double valor;
   final String descricao;
@@ -8,7 +8,7 @@ class Pedido {
   final bool pago;
 
   Pedido({
-    required this.idPedido,
+    required this.id,
     required this.nomeCliente,
     required this.valor,
     required this.descricao,
@@ -19,7 +19,7 @@ class Pedido {
 
   factory Pedido.fromJson(Map<String, dynamic> json) {
     return Pedido(
-      idPedido: json['idPedido'] ?? '',
+      id: json['id'] ?? '',
       nomeCliente: json['nomeCliente'] ?? '',
       valor: (json['valor'] ?? 0.0).toDouble(),
       descricao: json['descricao'] ?? '',
@@ -31,7 +31,7 @@ class Pedido {
 
   Map<String, dynamic> toJson() {
     return {
-      'idPedido': idPedido,
+      'id': id,
       'nomeCliente': nomeCliente,
       'valor': valor,
       'descricao': descricao,
